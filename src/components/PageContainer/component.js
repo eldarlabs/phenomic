@@ -240,9 +240,13 @@ class PageContainer extends Component<DefaultProps, Props, void> {
       typeof page !== "object" ||
       page.toString() !== "[object Object]"
     ) {
-      props.logger.info(
-        `${ logPrefix } page ${ pageUrl } should be an object`
-      )
+      // This shows up in production and I don't understand why
+      // so I am taking it out unless I find a problem
+      if (process.env.NODE_ENV !== "production") {
+        props.logger.info(
+          `${ logPrefix } page ${ pageUrl } should be an object`
+        )
+      }
       return null
     }
     const PageLoading = getLayout("PageLoading", props)
