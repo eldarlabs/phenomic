@@ -73,8 +73,8 @@ export default async function test(
     // what we try to achieve by tuning the install to have a fast CI
     await cmdShim("lib/bin/index.js", `${ targetModules }/.bin/phenomic`)
     await lnfs("lib/bin/index.js", `${ targetModules }/.bin/phenomic`)
-    await lnfs("lib", `${ targetModules }/phenomic/lib`)
-    await lnfs("package.json", `${ targetModules }/phenomic/package.json`)
+    await lnfs("lib", `${targetModules }/@eldarlabs/phenomic/lib`)
+    await lnfs("package.json", `${targetModules }/@eldarlabs/phenomic/package.json`)
   }
   catch (err) {
     // async workaround :)

@@ -58,8 +58,8 @@ export default (config: PhenomicConfig): WebpackConfig => {
       ...webpackConfig.externals || defaultExternals,
 
       // keep the loader plugin cache in memory
-      "phenomic/lib/loader/index",
-      "phenomic/lib/loader/plugin",
+      "@eldarlabs/phenomic/lib/loader/index",
+      "@eldarlabs/phenomic/lib/loader/plugin",
     ],
 
     // sourcemaps

@@ -4,7 +4,7 @@ import "react-hot-loader/patch"
 // fetch polyfill
 import "whatwg-fetch"
 
-import phenomicClient from "phenomic/lib/client"
+import phenomicClient from "@eldarlabs/phenomic/lib/client"
 
 import metadata from "../src/metadata.js"
 import routes from "../src/routes.js"
@@ -22,7 +22,7 @@ if (module.hot) {
   // hot load md
   module.hot.accept(mdContext.id, () => {
     mdContext = require.context("../content", true, /\.(md|markdown)$/)
-    const mdHotUpdater = require("phenomic/lib/client/hot-md").default
+    const mdHotUpdater = require("@eldarlabs/phenomic/lib/client/hot-md").default
     const requireUpdate = mdHotUpdater(mdContext, window.__COLLECTION__, store)
     mdContext.keys().forEach(requireUpdate)
   })
