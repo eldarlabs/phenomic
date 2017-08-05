@@ -1,6 +1,6 @@
 {
   "name": "@eldarlabs/phenomic",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Modern website generator based on the React and Webpack ecosystem.",
   "keywords": [
     "webpack",
@@ -23,7 +23,7 @@
   "author": "Maxime Thirouin",
   "license": "MIT",
   "homepage": "https://phenomic.io",
-  "repository": "https://github.com/MoOx/phenomic.git",
+  "repository": "https://github.com/eldarlabs/phenomic.git",
   "main": "lib/index.js",
   "files": [
     "npm",
